@@ -9,43 +9,67 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
     <link rel="stylesheet" href="/app/assets/style.css">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 
-<body>
+  </head>
+  
+  
+  <body>
+
+      <div class="containter-fluid hero-image d-flex p-2">
+          <div class="hero-text">
+            <h1>Where trading begins</h1>
+            <p></p>
+            
+            <form onsubmit="app.controllers.carController.addCar(event)">
+                <label for="make">Make</label>
+                <input type="text" name="make" placeholder="Make" required>
+                <label for="make">Model</label>
+                <input type="text" name="model" placeholder="Model" required>
+                <label for="make">Year</label>
+                <input type="number" name="year" placeholder="Year" value="2000" required>
+                <label for="make">Price</label>
+                <input type="text" name="price" placeholder="Price" required>
+                <label for="make">Color</label>
+                <input type="text" name="color" placeholder="Color" required>
+                <input type="url" name="imgUrl" placeholder="Image Link" required>
+                <button type="submit">Add Car</button>
+              </form>
+              
+              <form onsubmit="app.controllers.houseController.addHouse(event)">
+                <!-- <label for="make">Make</label> -->
+                <label for="make">Price</label>
+                <input type="text" name="price" placeholder="Price" required>
+                <label for="make">Square Footage</label>
+                <input type="text" name="squareFt" placeholder="Square Ft" required>
+                <label for="make">Color</label>
+                <input type="text" name="color" placeholder="Color"  required>
+                <label for="make">Location</label>
+                <input type="text" name="location" placeholder="Location" required>
+                <input type="url" name="imgUrl" placeholder="Image Link" required>
+                <button type="submit">Add House</button>
+              </form>
+            
+          </div>
+        </div>
+    
+    <div class="container-fluid heroimg">
+      <div id="houses" class="row">
+        <!-- <div class="col-3">
+          <p>${car.make}</p>
+          <p>${car.model}</p>
+          <p>${car.price}</p>
+          <p>${car.year}</p>
+          <p>${car.color}</p>
+          <img src="${car.imgUrl}" alt="somethingelse">
+        </div> -->
+      </div>
+    </div>
+    
 
 
-
-
-
-
-
-
-
-
-
-  <form onsubmit="app.controllers.carController.addCar(event)">
-    <!-- <label for="make">Make</label> -->
-    <input type="text" name="make" placeholder="Make" required>
-    <input type="text" name="model" placeholder="Model" required>
-    <input type="number" name="year" placeholder="Year" value="2000" required>
-    <input type="text" name="price" placeholder="Price" required>
-    <input type="text" name="color" placeholder="Color" required>
-    <input type="url" name="imgUrl" placeholder="Image Link" required>
-    <button type="submit">Add Car</button>
-  </form>
-
-  <form onsubmit="app.controllers.houseController.addHouse(event)">
-    <!-- <label for="make">Make</label> -->
-    <input type="text" name="price" placeholder="Price" required>
-    <input type="text" name="squareFt" placeholder="Square Ft" required>
-    <input type="text" name="color" placeholder="Color"  required>
-    <input type="text" name="location" placeholder="Location" required>
-    <input type="url" name="imgUrl" placeholder="Image Link" required>
-    <button type="submit">Add House</button>
-  </form>
-
-
-
+  
+  
 
 
 
@@ -62,22 +86,18 @@
     </div>
   </div>
 
-
-  <div class="container">
-    <div id="houses" class="row">
-      <!-- <div class="col-3">
-        <p>${car.make}</p>
-        <p>${car.model}</p>
-        <p>${car.price}</p>
-        <p>${car.year}</p>
-        <p>${car.color}</p>
-        <img src="${car.imgUrl}" alt="somethingelse">
-      </div> -->
-    </div>
-  </div>
+  
 
 
-  <script src="main.js" type="module"></script>
+
+  <script src="main.js" type="module">
+  
+  
+  
+  
+  
+  
+  </script>
 </body>
 
 </html>
