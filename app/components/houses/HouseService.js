@@ -1,4 +1,4 @@
-import House from '../..models/House.js'
+import House from '../../models/House.js'
 //PRIVATE
 
 let houses = []
@@ -8,8 +8,8 @@ export default class HouseService{
     constructor(){
 
     }
-  getHouse(){
-      let houseCopy = []
+  getHouses(){
+      let housesCopy = []
 
         //same as below
     // for (let i = 0; i < cars.length; i++) {
@@ -20,7 +20,7 @@ export default class HouseService{
     // this is just saying for each 'car'
     //  in the whole cars array do whatever is in the code block 
     houses.forEach(house => {
-        houseCopy.push(new House(
+        housesCopy.push(new House(
           house.price,
           house.squareFt,
           house.location,
@@ -28,7 +28,7 @@ export default class HouseService{
           house.imgUrl
         ))
       })
-      return houseCopy
+      return housesCopy;
   }
     
   addHouse(formData) {
@@ -59,4 +59,3 @@ export default class HouseService{
 
 
 
-}
