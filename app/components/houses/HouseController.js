@@ -22,6 +22,7 @@ function drawHouses(houses) {
           <p><b>Price:</b>  ${house.price}</p>
 
           <img class="url" src="${house.imgUrl}" alt="house">
+          <button onclick="app.controllers.houseController.deleteHouse('${house.id}')">DELETE</button>
       </div>
       `
     }
@@ -53,6 +54,11 @@ export default class HouseController {
 
 
 
+    }
+
+
+    deleteHouse(houseId){
+    houseService.deleteHouse(houseId,drawHouses)
     }
 }
 

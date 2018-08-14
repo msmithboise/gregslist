@@ -3,7 +3,7 @@ import Car from '../../models/Car.js'
 //Creates a new HTTP Request object
 const carsApi = axios.create({
   //base connection url
-  baseURL: 'https://bcw-gregslist.herokuapp.com/api/cars',
+  baseURL: 'https://bcw-gregslist.herokuapp.com/api/cars/',
   //only wait 3 seconds for response
   timeout: 3000
 })
@@ -18,6 +18,7 @@ export default class CarService {
   getCars(draw) {
     carsApi.get()
       .then(res => {
+        console.log('cars res',res)
         //converts each raw car data into Car class objects
         let cars = res.data.data.map(rawCar => {
           return new Car(rawCar)
@@ -40,6 +41,22 @@ export default class CarService {
     //second parameter is object to pass to server
     carsApi.post('', newCar)
       .then(res => {
+        this.getCars(draw)
+      })
+  }
+
+  deleteCar(carId, drawfn) {
+    carsApi.delete(carId)
+      .then(res => {
+        
+        this.getCars(drawfn)
+      })
+  }
+
+  bid(carId, update, draw) {
+    carsApi.put(carId, update)
+      .then(res => {
+        console.log(res)
         this.getCars(draw)
       })
   }
