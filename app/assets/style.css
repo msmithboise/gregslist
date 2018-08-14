@@ -1,29 +1,30 @@
-.url{
+/* .url{
     width: 250px;
     height: 200px;
+} */
+
+img{
+    height: 125px;
 }
 
 
-body, html {
+/* body, html {
     height: 100%;
-}
+} */
 
 /* The hero image */
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: url("https://images.unsplash.com/photo-1448301858776-07f780e9c9da?ixlib=rb-0.3.5&s=b843a9eba3b11b9970d9616a301b1b18&auto=format&fit=crop&w=1350&q=80");
-
-    /* Set a specific height */
     height: 100%;
-
-    /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    
 }
 
-/* Place text in the middle of the image */
+
 .hero-text {
     text-align: center;
     position: absolute;
