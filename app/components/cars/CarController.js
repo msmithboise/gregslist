@@ -10,7 +10,7 @@ function drawCars(cars) {
     <div style="outline: 1px solid black" class="col-3">
         <p>Make: ${car.make}</p>
         <p>${car.model}</p>
-        <p>$${car.price}</p>
+        <p>${car.price}</p>
         <button onclick="app.controllers.carController.bid('${car._id}', ${car.price})">BID</button>
         <p>${car.year}</p>
         <p>${car.description}</p>

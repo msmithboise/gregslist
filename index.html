@@ -14,7 +14,7 @@
 <body>
 <div class="container-fluid hero-image">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
   <form onsubmit="app.controllers.carController.addCar(event)">
     <!-- <label for="make">Make</label> -->
     <input type="text" name="make" placeholder="Make" required>
@@ -27,7 +27,7 @@
   </form>
 </div>
 
-<div class="col-sm-6">
+<div class="col-sm-4">
   <form onsubmit="app.controllers.houseController.addHouse(event)">
     <!-- <label for="make">Make</label> -->
     <input type="text" name="bedrooms" placeholder="Bedrooms" required>
@@ -40,6 +40,22 @@
     <button type="submit">Add House</button>
   </form>
 </div>
+
+<div class="col-sm-4">
+    <form onsubmit="app.controllers.jobController.addJob(event)">
+      <!-- <label for="make">Make</label> -->
+      <input type="text" name="company" placeholder="Company" required>
+      <input type="text" name="jobTitle" placeholder="Job Title" required>
+      <input type="number" name="hours" placeholder="Hours" value="2000" required>
+      <input type="text" name="rate" placeholder="Rate" required>
+      <input type="text" name="description" placeholder="Description" required>
+      
+      
+      <button type="submit">Add Job</button>
+    </form>
+  </div>
+
+
 </div>
 </div>
 
@@ -73,6 +89,20 @@
     </div>
     </div>
 
+    <div class="container">
+        <div id="jobs" class="row">
+           <div class="col-3">
+            <p>${job.company}</p>
+            <p>${job.jobTitle}</p>
+            <p>${job.hours}</p>
+            <p>${job.rate}</p>
+            <p>${job.description}</p>
+           
+  
+            
+          </div>
+      </div>
+      </div>
 
 
 

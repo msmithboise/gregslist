@@ -18,7 +18,7 @@ export default class CarService {
   getCars(draw) {
     carsApi.get()
       .then(res => {
-        console.log('cars res',res)
+        // console.log('cars res',res)
         //converts each raw car data into Car class objects
         let cars = res.data.data.map(rawCar => {
           return new Car(rawCar)
