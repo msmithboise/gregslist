@@ -14,7 +14,7 @@ function drawHouses(houses) {
 
 
         
-      <div style="outline: 1px solid black" class="col-3">
+      <div style="outline: 1px solid black" class="col-12">
           <p><b>Bedrooms:</b>  ${house.bedrooms}</p>
           <p><b>Bathrooms:</b>  ${house.bathrooms}</p>
           <p><b>Levels:</b>  ${house.levels}</p>

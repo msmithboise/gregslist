@@ -10,7 +10,7 @@ function drawJobs(jobs) {
         const job = jobs[i];
         template += `
     
-<div style="outline: 1px solid black" class="col-3">
+<div style="outline: 1px solid black" class="col-12">
 <p><b>Company:</b> ${job.company}</p>
 <p><b>Job Title:</b> ${job.jobTitle}</p>
 <p><b>Hours:</b> ${job.hours}</p>
