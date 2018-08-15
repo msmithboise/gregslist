@@ -16,7 +16,7 @@ function drawJobs(jobs) {
 <p><b>Hours:</b> ${job.hours}</p>
 <p><b>Rate:</b> ${job.rate}</p>
 <p><b>Description:</b> ${job.description}</p>
-<button onclick="app.controllers.carController.deleteCar('${job._id}')">DELETE</button>
+<button onclick="app.controllers.jobController.deleteJob('${job._id}')">DELETE</button>
 </div>
 `
     }

@@ -28,6 +28,7 @@ getJobs(draw) {
 }
 
 addJob(formData, draw) {
+
     let newJob = new Job ({
         company: formData.company.value,
         jobTitle: formData.jobTitle.value,
@@ -39,7 +40,7 @@ addJob(formData, draw) {
 
 jobsApi.post('',newJob)
 .then(res => {
-
+debugger
     this.getJobs(draw)
 })
 }
